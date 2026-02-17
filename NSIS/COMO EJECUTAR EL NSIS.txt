@@ -1,0 +1,2 @@
+-Descomprimir el zip y mantener la estructura de las carpetas, las 4 carpetas en el mismo directorio.
+-hacer ./makensis ruta/al/installer.nsi
