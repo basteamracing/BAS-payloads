@@ -1,7 +1,7 @@
 function Get-Text {
     param([string]$ImagePath)
     
-    if([string]::IsNullOrEmpty($ImagePath) -or [string]::IsNullOrEmpty($Message) -or [string]::IsNullOrEmpty($ImageOutput)){
+    if([string]::IsNullOrEmpty($ImagePath)){
         Write-Output ">> All arguments were not specified <<";
         Write-Output "* ImagePath [string] --> Path to original image";
         return;
@@ -32,5 +32,6 @@ function Get-Text {
     }
     
     $bitmap.Dispose();
+    
     return [System.Text.Encoding]::UTF8.GetString($bytes);
 }

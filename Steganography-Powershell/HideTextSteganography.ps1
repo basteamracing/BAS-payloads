@@ -1,4 +1,4 @@
-function Hide_Text {
+function Hide-Text {
     param(
         [string]$ImagePath,
         [string]$Message,
@@ -10,6 +10,17 @@ function Hide_Text {
         Write-Output "* ImagePath [string] --> Path to original image";
         Write-Output "* Message [string] --> Message to hide";
         Write-Output "* ImageOutput [string] --> Path to image with message hidden";
+        return;
+    }
+
+    if ($ImagePath -match '\.jpg$|\.jpeg$') {
+        Write-Output "JPEG/JPG is not supported. Input must be PNG";
+        return;
+    }
+
+    if ($ImageOutput -match '\.jpg$|\.jpeg$') {
+        Write-Warning "JPEG/JPG is not supported. Changing output to PNG...";
+        $ImageOutput = $ImageOutput -replace '\.jpg$|\.jpeg$', '.png';
         return;
     }
 
