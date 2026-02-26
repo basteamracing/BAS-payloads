@@ -4,7 +4,7 @@ function Get-Text {
     if([string]::IsNullOrEmpty($ImagePath) -or [string]::IsNullOrEmpty($Message) -or [string]::IsNullOrEmpty($ImageOutput)){
         Write-Output ">> All arguments were not specified <<";
         Write-Output "* ImagePath [string] --> Path to original image";
-        exit 0;
+        return;
     }
 
 
