@@ -18,12 +18,6 @@ function Hide-Text {
         return;
     }
 
-    if ($ImageOutput -match '\.jpg$|\.jpeg$') {
-        Write-Warning "JPEG/JPG is not supported. Changing output to PNG...";
-        $ImageOutput = $ImageOutput -replace '\.jpg$|\.jpeg$', '.png';
-        return;
-    }
-
     Add-Type -AssemblyName System.Drawing;
     
     $imagen = [System.Drawing.Image]::FromFile($ImagePath);
