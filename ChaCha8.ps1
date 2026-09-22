@@ -51,7 +51,7 @@ param(
 # ============================================================
 
 # Path to the BouncyCastle DLL. ADJUST THIS PATH.
-$BouncyCastlePath = "C:\path\to\BouncyCastle.Crypto.dll"
+$BouncyCastlePath = "C:\Users\Public\BouncyCastle.Crypto.dll"
 
 # Hardcoded 32-byte (256-bit) key.
 # ChaCha8 requires a 256-bit key. 32 bits is neither valid nor secure.
